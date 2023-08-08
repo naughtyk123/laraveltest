@@ -33,14 +33,15 @@
         </div>
         <!-- Blog entries-->
         <div class="col-lg-12">
-          
+
             <!-- Nested row for non-featured blog posts-->
             <div class="row">
+                @if($blogs)
                 @foreach($blogs as $blog)
                 <div class="col-lg-6">
                     <!-- Blog post-->
                     <div class="card card_hover mb-4">
-                 
+
                         <a href="{{url('blog',$blog->id)}}"><img class="card-img-top" src="{{url($blog->cover)}}" alt="..." /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{ \Carbon\Carbon::parse($blog->created_at)->diffForhumans() }}</div>
@@ -53,9 +54,13 @@
                 </div>
                 @endforeach
                 {{ $blogs->links('pagination::bootstrap-4') }}
+                @else
 
+                    <h1>No blogs to show</h1>
+
+                @endif
             </div>
-      
+
         </div>
 
     </div>

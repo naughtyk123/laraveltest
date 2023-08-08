@@ -176,7 +176,7 @@
                         "hideMethod": "slideUp",
                         timeOut: 2000
                     });
-                    // window.location.reload();
+                    location.reload();
                 }
                 if (data.status == "false") {
                     toastr.error(data.message, 'ERROR', {
@@ -185,6 +185,7 @@
                         timeOut: 2000
                     });
                 }
+              
             }
         });
 

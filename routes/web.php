@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', 'Front@index')->name('front');
 Route::get('front', 'Front@index')->name('front');
 
 Route::get('create_user', 'Users@index')->name('create_user');
@@ -45,7 +45,7 @@ Route::post('resetpassword', 'Login@resetpassword')->name('resetpassword');
 
 
 
-Route::get('/', 'Admin@login');
+// Route::get('/', 'Admin@login');
 
 Route::group(['middleware' => ['admincheck']], function () {
     Route::get('create_blog', 'Users@create_blog')->name('create_blog');
@@ -57,7 +57,7 @@ Route::group(['middleware' => ['admincheck']], function () {
     Route::post('remove_tiny_image', 'Tinymce@remove_tiny_image')->name('remove_tiny_image');
     Route::post('add_blog', 'Users@add_blog')->name('add_blog');
     Route::get('blog_update/{id}', 'Users@blog_update')->name('blog_update');
-    
+
     // Route::get('create_user', 'Users@index')->name('create_user');
   
     Route::get('user-list', 'Users@user_list')->name('user-list');
