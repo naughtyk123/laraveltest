@@ -38,7 +38,7 @@
             <div class="row">
                 @if($blogs)
                 @foreach($blogs as $blog)
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <!-- Blog post-->
                     <div class="card card_hover mb-4">
 
