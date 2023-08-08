@@ -1,0 +1,9 @@
+.profilebox {
+    background: "{{url('http://localhost.nebp.com/assets/app-assets/img/pricing-bg.png')}}" ;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: auto;
+    padding: 25px;
+    background-size: cover;
+    background-position: center center;
+  }
